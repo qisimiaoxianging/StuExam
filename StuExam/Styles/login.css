@@ -1,0 +1,257 @@
+﻿/* reset */
+
+body {
+	line-height: 1.666;
+	background-color: #DEDEDE
+}
+body,
+select,
+input,
+h1,
+h2,
+h3 {
+	font-size: 12px
+}
+body,
+input,
+select {
+	font-family:"Microsoft Yahei","微软雅黑",verdana;
+	font-size: 14px;
+	color: #333;
+}
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+form,
+p,
+img {
+	margin: 0;
+	padding: 0;
+	border: 0
+}
+input {
+	margin: 0;
+	padding: 0
+}
+input,
+img {
+	line-height: normal
+}
+ul {
+	list-style: none
+}
+.ipt-c {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0 3px 0 0
+}
+article,
+aside,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block
+}
+/* 背景 */
+
+body{
+	background: url(../images/bg2.jpg) top center no-repeat ;
+	background-size:cover;
+}
+.btn
+ {
+	background-image: url(../images/btn_bg.png);
+	background-repeat: no-repeat
+}
+
+.content {
+}
+/* 文字样式 */
+
+.txt-b {
+	font-weight: bold
+}
+.txt-err {
+	color: red
+}
+/* 行内元素 */
+
+.links-item,
+.tab-item a,
+.ico,
+.btn,
+.copy-item {
+	display: inline-block;
+	+display: inline;
+	+zoom: 1;
+	vertical-align: middle
+}
+/* 隐藏文字 */
+
+.login{
+	background: rgba(255,255,255,0.5);
+	padding-bottom: 20px;
+}
+/* 按钮 */
+
+.btn {
+	width: 86px;
+	height: 34px;
+	border: none;
+	background-color: #fff;
+	cursor: pointer
+}
+.btn-submit {
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold
+}
+/* 输入框 */
+
+.ipt-t {
+	vertical-align: middle;
+	margin-right: 10px;
+	border: 1px solid #878787;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 3px 6px;
+	width: 182px;
+	border: 1px solid #9eb2cd;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px #dedede inset;
+	font-size: 14px;
+}
+.ipt-t-focus {
+	background: #FFFFD8!important
+}
+/* 页面容器 */
+
+.container {
+	width: 960px;
+	margin: 0 auto
+}
+/* 顶部 */
+
+.header {
+	height: 84px;
+	position: relative;
+	zoom: 1
+}
+.header .logo {
+	position: absolute;
+	margin: 20px;
+}
+.header .subLogo {
+position: absolute;
+line-height: 40px;
+
+font-weight: bold;
+color: #4A7CF3;
+padding-left: 15px;
+font-size: 32px;
+border-left: 1px solid rgba(145, 169, 200, 1);
+top: 22px;
+width: 260px;
+left: 230px;
+text-shadow: #FFF 0 0 3px;
+
+}
+.header .links {
+	position: absolute;
+	right: 0px;
+	top: 40px
+}
+.header .links-item {
+	margin-left: 12px
+}
+.header a {
+	color: #888!important;
+	text-decoration: none
+}
+.header a:hover {
+	text-decoration: underline
+}
+.header .txt-impt {
+	color: red!important
+}
+/* 主要内容 */
+
+.main_content {
+	height: 486px;
+	position: relative;
+	zoom: 1;
+	
+}
+
+/* 登录框 */
+
+.login {
+	position: absolute;
+	left: 464px;
+	top: 50px;
+	width: 400px;
+	border-radius:8px;
+	box-shadow: -2px 2px 4px #156669;
+}
+.login .hd {
+	position: relative;
+	z-index: 1;
+	margin-left: 41px;
+	margin-top: 24px;
+	width: 265px;
+	height: 32px;
+	font-size: 20px;
+	font-weight: 200;
+	color: #777;
+}
+.login .bd {
+	margin-left: 41px;
+	margin-top: 6px;
+}
+.login .item {
+	padding: 8px 0
+}
+.login .item-version {
+	padding-top: 4px
+}
+.login .item .name {
+	float: left;
+	width: 44px;
+	line-height: 30px;
+	margin-right: 5px
+}
+.login .at {
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 14px;
+	margin-right: 8px
+}
+.login .domain {
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: bold
+}
+.login .sel {
+	margin-top: 4px;
+	width: 190px;
+	cursor: pointer
+}
+.login .submit,
+.login .options {
+	padding: 2px 0 8px 48px;
+	font-size: 12px
+}
+.login .submit .btn-submit {
+	vertical-align: middle
+}
+.login .submit .txt-err {
+	margin-left: 10px
+}
