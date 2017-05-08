@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="login.aspx" />
     <Content Include="scripts\bootstrap-datetimepicker.fr.js" />
     <Content Include="scripts\bootstrap-datetimepicker.js" />
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
@@ -143,6 +144,13 @@
     <Compile Include="DAL\Stydent_DAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Student_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
