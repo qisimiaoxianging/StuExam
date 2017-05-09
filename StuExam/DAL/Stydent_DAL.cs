@@ -165,7 +165,7 @@ namespace StuExam.DAL
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select  top 1 JobNumber,Password,Name,Iamage from Teacher ");
-            strSql.Append(" where JobNumber=@JobNumber ");
+            strSql.Append(" where JobNumber=@JobNumber and Password=@Password");
             SqlParameter[] parameters = {
                     new SqlParameter("@JobNumber", SqlDbType.NVarChar,15),
                     new SqlParameter("@Password", SqlDbType.NVarChar,16),};
