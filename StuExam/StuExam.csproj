@@ -113,6 +113,7 @@
     <Content Include="images\bg.jpg" />
     <Content Include="images\btn_bg.png" />
     <Content Include="images\logo_school.png" />
+    <Content Include="images\student_image.png" />
     <Content Include="login.aspx" />
     <Content Include="scripts\bootstrap-datetimepicker.fr.js" />
     <Content Include="scripts\bootstrap-datetimepicker.js" />
@@ -139,8 +140,12 @@
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="Students\Management.aspx" />
     <Content Include="Styles\login.css" />
+    <Content Include="Styles\Management.css" />
     <Content Include="Styles\table.css" />
+    <Content Include="Styles\TeacherHome.css" />
+    <Content Include="Teacher\TeacherHome.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +165,20 @@
     <Compile Include="Models\Student_Model.cs" />
     <Compile Include="Models\Teacher_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Students\Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students\Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherHome.aspx.cs">
+      <DependentUpon>TeacherHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherHome.aspx.designer.cs">
+      <DependentUpon>TeacherHome.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

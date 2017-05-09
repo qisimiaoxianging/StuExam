@@ -1,0 +1,263 @@
+﻿body 
+{
+    background-color:white;
+}
+*{margin:0px;padding:0px}
+.top_image {
+    position:relative;
+    left: 572px;
+    bottom: 10px;
+}
+.option
+{
+    height:40px;
+    background-color:rgb(144,175,199);    
+}
+.option ul li
+{
+    list-style:none;    
+    height:20px;
+    float:right;
+    margin:0px 5px;
+    color:White;  
+    font-size:20px; 
+    position:relative;
+    right: 302px;
+    padding:10px;  
+    background-color:rgb(144,175,199);    
+}
+
+ul li a
+{
+    color:White;
+    font-size:15px;
+    filter: alpha(opacity = 80); 
+    -moz-opacity: 0.8; 
+    opacity: 1; 
+}
+.option ul li:hover{background:rgb(63,105,135);color:#2b5877}
+a{ text-decoration:none;}
+/*左侧学生的信息*/
+.stuinformation
+{
+    width:240px;
+    float:left;
+    border-radius:10px;/*圆角化*/    
+    height:680px;  
+    background-color:rgb(144,175,199);
+    font-weight:bold;
+    color:White;
+    line-height:40px;
+    position:relative;
+    left:380px;
+    top:20px;
+    text-align:left;    
+}
+.stuinfor
+{
+    position: relative;
+    left: 950px;
+    top: -60px;
+    width: 300px;
+    height: 63px;
+    line-height: 25px;
+    color: #666666;
+    font-size: 14px;
+}
+    .stuinfor span {
+        color:#2b5877;
+    }
+
+.image2
+{
+    margin:0px 30px;    
+}
+/*主框*/
+.frame
+{
+    display:none;
+    width: 1200px;
+    height: auto;
+    position: relative;
+    top: 20px;
+    left: 410px;
+}
+.homework
+{    
+    line-height: 15px;
+    font-size: 14px;
+    border-collapse:collapse;
+}
+.homework a{color:Red;}
+.head
+{
+    background-color:rgb(238,238,238); 
+    height:30px; 
+    border-right:0.5px solid rgb(204,204,204);
+    font-weight:normal;
+}
+tr td
+{    
+    padding:10px 10px; 
+    width:200px; 
+    text-align:center;      
+}
+.mark_course
+{
+    display:none;
+    width: 1200px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    background-color: rgb(144,175,199);
+    position: relative;
+    top: 20px;
+    left: 410px;
+    color: White;
+}
+/*平时成绩*/
+.ordinary_mark
+{
+    width: 140px;
+    height: 39px;
+    float: left;
+    position: relative;
+    font-size:14px;
+}
+/*课程选择*/
+.choice_course
+{
+    width:260px;
+    height:21px;
+    float:right; 
+    font-size:14px;
+}
+/*推荐文章*/
+.artical
+{
+    width:1200px;
+    height:auto; 
+    float:left;
+    position: relative;
+    top: 23px;
+    left: 410px;     
+}
+#Table1
+{
+    width:100%;  
+}
+.tabletop
+{
+    text-align:left;
+    color:white;
+    height:35px;
+    background-color:rgb(144,175,199);       
+}
+.center
+{
+    padding: 5px 150px;
+    width: 312px;
+}
+/*弹出提示层按钮*/
+.Affirm
+{
+	color: white;
+	z-index:999;
+	font-weight:bold;
+	cursor:pointer;
+	background-color: rgb(144,175,199);    
+}
+.cancel
+{
+    float: right;		
+    color: white;
+    z-index:999;
+    font-weight:bold;
+    cursor:pointer; 
+    background-color: rgb(144,175,199);   
+}
+/*分页页码样式*/
+.pagination {
+margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    top: 800px;
+}
+.pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #2b5877;
+    background: #fff;
+    color: #2b5877;
+}
+.pagination a.current {
+    background: #2b5877;
+    color: #fff;
+}
+.pagination a:hover { 
+    background: #90afc7;
+	color: #fff;
+} 
+.pagination a:active { 
+    background: #2b5877;
+	color: #fff;
+} 
+ 
+.pagination a.disabled {
+	background: #fff;
+	border: 1px solid #a1a1a1;
+	color: #a1a1a1;
+}
+.pagination span {
+    color:#a1a1a1        
+}
+.pagination p{
+    color:#a1a1a1;
+    display:inline;        
+}
+.pagination #addAimPage a {
+        cursor:pointer;                
+}
+.pagination #addAimPage a .current {
+    background: #2b5877;
+    color: #fff;
+}
+.pagination #addAimPage a:hover { 
+    background: #90afc7;
+	color: #fff;
+} 
+.pagination #addAimPage a:active { 
+    background: #2b5877;
+	color: #fff;
+} 
+ 
+.pagination #addAimPage a.disabled {
+	background: #fff;
+	border: 1px solid #a1a1a1;
+	color: #a1a1a1;
+}
+/*底层栏*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #fafafa;
+}
+.content {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+.footer_info {
+    line-height: 30px;
+    text-align: center;
+    color: #a1a1a1;
+    font-size: 12px;
+}

@@ -218,7 +218,6 @@ E:\Git_R\StuExam\StuExam\bin\es\DevExpress.Pdf.v15.2.Core.resources.dll
 E:\Git_R\StuExam\StuExam\bin\ja\DevExpress.Pdf.v15.2.Core.resources.dll
 E:\Git_R\StuExam\StuExam\bin\ru\DevExpress.Pdf.v15.2.Core.resources.dll
 E:\Git_R\StuExam\StuExam\obj\Debug\StuExam.csprojResolveAssemblyReference.cache
-E:\Git_R\StuExam\StuExam\obj\Debug\StuExam.dll.licenses
 E:\Git_R\StuExam\StuExam\obj\Debug\StuExam.dll
 E:\Git_R\StuExam\StuExam\obj\Debug\StuExam.pdb
 E:\StuExam\StuExam\obj\Debug\StuExam.csprojResolveAssemblyReference.cache

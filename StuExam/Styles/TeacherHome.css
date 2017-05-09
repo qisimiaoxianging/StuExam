@@ -1,0 +1,80 @@
+﻿body {
+}
+*{margin:0px;padding:0px}
+.top_image {
+    position:relative;
+    left: 572px;
+    bottom: 10px;
+}
+.Teainfor
+{
+    position: relative;
+    left: 950px;
+    top: -60px;
+    width: 300px;
+    height: 63px;
+    line-height: 25px;
+    color: #666666;
+    font-size: 14px;
+}
+    .Teainfor span {
+        color:#2b5877;
+    }
+
+.image2
+{
+    margin:0px 30px;    
+}
+.option
+{
+    height:40px;
+    background-color:rgb(144,175,199);    
+}
+.option ul li
+{
+    list-style:none;    
+    height:20px;
+    float:right;
+    margin:0px 5px;
+    color:White;  
+    font-size:20px; 
+    position:relative;
+    right: 302px;
+    padding:10px;  
+    background-color:rgb(144,175,199);
+    top: 0px;
+}
+ul li a
+{
+    color:White;
+    font-size:15px;
+    filter: alpha(opacity = 80); 
+    -moz-opacity: 0.8; 
+    opacity: 1; 
+}
+.option ul li:hover{background:rgb(63,105,135);color:#2b5877}
+a{ text-decoration:none;}
+/*底层栏*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #fafafa;
+}
+.content {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+.footer_info {
+    line-height: 30px;
+    text-align: center;
+    color: #a1a1a1;
+    font-size: 12px;
+}
