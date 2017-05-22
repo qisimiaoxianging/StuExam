@@ -143,6 +143,7 @@
     <Content Include="Students\Management.aspx" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\Management.css" />
+    <Content Include="Styles\Modify.css" />
     <Content Include="Styles\table.css" />
     <Content Include="Styles\TeacherHome.css" />
     <Content Include="Teacher\ModifyPassword.aspx" />

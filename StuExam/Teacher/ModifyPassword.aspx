@@ -6,12 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link rel="Stylesheet" href="../Styles/Modify.css" type="text/css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-         <div class="out" id="Out" runat="server">    
-
-        </div>
+        
     </form>
 </body>
 </html>
