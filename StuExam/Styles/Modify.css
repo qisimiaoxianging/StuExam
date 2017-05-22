@@ -45,3 +45,54 @@ li.active a {
     display: block;
     cursor:pointer;
 }
+.password_frame
+{
+    margin: 0 auto;
+    padding: 30px 30px;
+    width: 100%;
+    height: auto;
+    float: left;
+    color: #474747;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;    
+}
+.info_box
+{
+    margin: 0 auto;
+    padding: 20px 0;
+    height: auto;
+    color: #666;
+    border-bottom: 1px dashed #2b5877;    
+}
+.info_box1
+{
+    margin: 0 auto;
+    padding: 0 5px 0 0;
+    width: 12%;
+    height: 240px;
+    float: left;
+    text-align: right;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.info_box1 span {
+    margin-bottom: 15px;
+    line-height: 36px;
+    display: block;
+}
+.info_box2 {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    height: 240px;
+    text-align: left;
+}
+.info_box2 div {
+    margin-bottom: 15px;
+}
+.info_box2 div span {
+    padding-left: 5px;
+    line-height: 36px;
+}
