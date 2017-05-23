@@ -82,6 +82,72 @@ namespace StuExam.Model
         #endregion Model
 
     }
-    
+
+    /// <summary>
+    /// Choice:实体类(属性说明自动提取数据库字段的描述信息)
+    /// </summary>
+    [Serializable]
+    public partial class Choice
+    {
+        public Choice()
+        { }
+        #region Model
+        private long _number;
+        private string _subject;
+        private string _answer;
+        private int _chapter;
+        private int _section;
+        private string _subject1;
+        /// <summary>
+        /// 编号
+        /// </summary>
+        public long Number
+        {
+            set { _number = value; }
+            get { return _number; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Subject
+        {
+            set { _subject = value; }
+            get { return _subject; }
+        }
+        /// <summary>
+        /// 答案
+        /// </summary>
+        public string Answer
+        {
+            set { _answer = value; }
+            get { return _answer; }
+        }
+        /// <summary>
+        /// 章
+        /// </summary>
+        public int Chapter
+        {
+            set { _chapter = value; }
+            get { return _chapter; }
+        }
+        /// <summary>
+        /// 节
+        /// </summary>
+        public int Section
+        {
+            set { _section = value; }
+            get { return _section; }
+        }
+        /// <summary>
+        /// 内容
+        /// </summary>
+        public string Subject1
+        {
+            set { _subject1 = value; }
+            get { return _subject1; }
+        }
+        #endregion Model
+
+    }
 }
 
