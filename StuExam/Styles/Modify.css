@@ -151,3 +151,53 @@ p {
     float: right;
     font-weight: bold;
 }
+.zhong
+{
+    display:none;
+    height: 28px;
+    width: 100px;
+    background-color: Orange;
+    position: relative;
+    right: 381px;
+    top: 3px;
+    float: right;
+    font-weight: bold;
+}
+.qiang
+{
+    display:none; 
+    height: 30px;
+    width: 150px;
+    background-color: Green;
+    position: relative;
+    right: 330px;
+    top: 3px;
+    float: right;
+    font-weight: bold;
+}
+
+.Affirm
+{
+    background-color:black;
+	border:1px solid red;
+	color: white;
+	z-index:999;
+	text-align:center;
+	font-weight:bold;
+	border-radius:10px;
+	opacity:1;
+	cursor:pointer;    
+}
+.cancel
+{
+    background-color:black;
+    float: right;		
+    border:1px solid red;
+    color: white;
+    z-index:999;
+    text-align:center;
+    font-weight:bold;
+    border-radius:10px;
+    opacity:1;
+    cursor:pointer;    
+}
