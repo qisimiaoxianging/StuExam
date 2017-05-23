@@ -82,8 +82,6 @@ namespace StuExam.Model
         #endregion Model
 
     }
-   
-
-
+    
 }
 

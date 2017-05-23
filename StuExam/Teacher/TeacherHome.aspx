@@ -24,6 +24,7 @@
         </div>
         <div class="option">
             <ul id="nav">
+                <li id="li2" runat="server"><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">题库修改</asp:LinkButton></li> 
                 <li id="li1" runat="server"><asp:LinkButton ID="LinkButton1" runat="server">密码修改</asp:LinkButton></li>           
             </ul>
         </div>
