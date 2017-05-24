@@ -143,10 +143,12 @@
     <Content Include="Students\Management.aspx" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\Management.css" />
+    <Content Include="Styles\Modify.css" />
     <Content Include="Styles\table.css" />
     <Content Include="Styles\TeacherHome.css" />
     <Content Include="Teacher\ChoiceManagement.aspx" />
     <Content Include="Teacher\Item.aspx" />
+    <Content Include="Teacher\ModifyPassword.aspx" />
     <Content Include="Teacher\TeacherHome.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -187,6 +189,13 @@
     </Compile>
     <Compile Include="Teacher\Item.aspx.designer.cs">
       <DependentUpon>Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\ModifyPassword.aspx.cs">
+      <DependentUpon>ModifyPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\ModifyPassword.aspx.designer.cs">
+      <DependentUpon>ModifyPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\TeacherHome.aspx.cs">
       <DependentUpon>TeacherHome.aspx</DependentUpon>

@@ -19,8 +19,20 @@ namespace StuExam.Teacher
         {
             iframe1.Attributes["src"] = "Item.aspx";
             iframe1.Style["display"] = "block";
+            li1.Style["background"] = "rgb(144,175,199)";
+            LinkButton1.Style["color"] = "white";
+            li2.Style["background"] = "white";
+            LinkButton2.Style["color"] = "rgb(144,175,199)";
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            iframe1.Attributes["src"] = "ModifyPassword.aspx";
+            iframe1.Style["display"] = "block";
             li2.Style["background"] = "rgb(144,175,199)";
             LinkButton2.Style["color"] = "white";
+            li1.Style["background"] = "white";
+            LinkButton1.Style["color"] = "rgb(144,175,199)";
         }
     }
 }

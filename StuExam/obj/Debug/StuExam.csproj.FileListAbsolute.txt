@@ -307,6 +307,7 @@ E:\StuExam\StuExam\bin\de\DevExpress.Pdf.v15.2.Core.resources.dll
 E:\StuExam\StuExam\bin\es\DevExpress.Pdf.v15.2.Core.resources.dll
 E:\StuExam\StuExam\bin\ja\DevExpress.Pdf.v15.2.Core.resources.dll
 E:\StuExam\StuExam\bin\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+<<<<<<< HEAD
 E:\StuExam\StuExam\StuExam\bin\ApplicationInsights.config
 E:\StuExam\StuExam\StuExam\bin\roslyn\csc.exe
 E:\StuExam\StuExam\StuExam\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -394,3 +395,92 @@ E:\StuExam\StuExam\StuExam\bin\ru\DevExpress.Pdf.v15.2.Core.resources.dll
 E:\StuExam\StuExam\StuExam\obj\Debug\StuExam.csprojResolveAssemblyReference.cache
 E:\StuExam\StuExam\StuExam\obj\Debug\StuExam.dll
 E:\StuExam\StuExam\StuExam\obj\Debug\StuExam.pdb
+=======
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ApplicationInsights.config
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\csc.exe
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\System.Collections.Immutable.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\System.Reflection.Metadata.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\vbc.exe
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\VBCSCompiler.exe
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\roslyn\VBCSCompiler.exe.config
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\StuExam.dll.config
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\StuExam.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\StuExam.pdb
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.DependencyCollector.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.Web.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.WindowsServer.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.ApplicationInsights.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Newtonsoft.Json.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\System.Net.Http.Formatting.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\System.Web.Http.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\System.Web.Http.WebHost.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.RichEdit.v15.2.Core.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Data.v15.2.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Office.v15.2.Core.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Web.v15.2.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Printing.v15.2.Core.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Pdf.v15.2.Core.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Pdf.v15.2.Drawing.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Web.ASPxRichEdit.v15.2.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.DependencyCollector.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.Web.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.AI.WindowsServer.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.ApplicationInsights.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\Newtonsoft.Json.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\System.Net.Http.Formatting.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\System.Web.Http.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\System.Web.Http.WebHost.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.RichEdit.v15.2.Core.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Data.v15.2.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Office.v15.2.Core.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Web.v15.2.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Printing.v15.2.Core.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Pdf.v15.2.Core.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\DevExpress.Pdf.v15.2.Drawing.xml
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\de\DevExpress.Web.ASPxRichEdit.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\es\DevExpress.Web.ASPxRichEdit.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ja\DevExpress.Web.ASPxRichEdit.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ru\DevExpress.Web.ASPxRichEdit.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\zh-Hans\System.Web.Http.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\de\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\es\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\de\DevExpress.Data.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\es\DevExpress.Data.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ja\DevExpress.Data.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ru\DevExpress.Data.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\de\DevExpress.Office.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\es\DevExpress.Office.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ja\DevExpress.Office.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ru\DevExpress.Office.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\de\DevExpress.Web.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\es\DevExpress.Web.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ja\DevExpress.Web.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ru\DevExpress.Web.v15.2.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\de\DevExpress.Printing.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\es\DevExpress.Printing.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ja\DevExpress.Printing.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ru\DevExpress.Printing.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\de\DevExpress.Pdf.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\es\DevExpress.Pdf.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ja\DevExpress.Pdf.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\bin\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\obj\Debug\StuExam.csprojResolveAssemblyReference.cache
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\obj\Debug\StuExam.dll
+D:\Workspace\Visual Studio\StuExam\StuExam\StuExam\obj\Debug\StuExam.pdb
+>>>>>>> origin/pass
