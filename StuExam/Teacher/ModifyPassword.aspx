@@ -7,6 +7,95 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link rel="Stylesheet" href="../Styles/Modify.css" type="text/css"/>
+    <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#New_Password").change(function () {
+                var str = $(this).val();
+                if (str.length == 0) {
+                    //隐藏密码强度匡
+                    $(".ruo").css({ "display": "none" });
+                    $(".zhong").css({ "display": "none" });
+                    $(".qiang").css({ "display": "none" });
+                    $("#qiang").css("display", "none");
+                    $("#ruo").css("display", "none");
+                    $("#zhong").css("display", "none");
+                }
+                if (str.length > 0 && str.length < 6) {
+                    alert("密码长度不能小于6位!");
+                }
+                else {
+                    var psd1 = /\d+/;   //纯数字      
+                    var psd2 = /[a-z]+/; //纯小写字母
+                    var psd3 = /[A-Z]+/; //纯大写字母
+                    var shuzi = 0;
+                    var xiaoxie = 0;
+                    var daxie = 0;
+                    var teshu = 0;
+                    //遍历寻找字符个数
+                    for (var i = 0; i < str.length; i++) {
+                        if (psd1.test(str.charAt(i)))
+                            shuzi++;
+                        else if (psd2.test(str.charAt(i)))
+                            xiaoxie++;
+                        else if (psd3.test(str.charAt(i)))
+                            daxie++;
+                        else
+                            teshu++;
+                    }
+                    if (shuzi > 0 && daxie > 0 && xiaoxie > 0 && teshu > 0) {
+                        $(".ruo").css({ "display": "none" });
+                        $(".zhong").css({ "display": "none" });
+                        $(".qiang").css({ "display": "block" });
+
+                        $("#qiang").css("display", "block");
+                        $("#ruo").css("display", "none");
+                        $("#zhong").css("display", "none");
+                    }
+                    else if (shuzi > 0 && daxie > 0 && xiaoxie > 0 && teshu == 0) {
+                        $(".ruo").css({ "display": "none" });
+                        $(".zhong").css({ "display": "block" });
+                        $(".qiang").css({ "display": "none" });
+                        $("#qiang").css("display", "none");
+                        $("#ruo").css("display", "none");
+                        $("#zhong").css("display", "block");
+                    }
+                    else if ((shuzi > 0 && daxie == 0 && xiaoxie == 0 && teshu == 0) || (shuzi == 0 && daxie > 0 && xiaoxie == 0 && teshu == 0) || (shuzi == 0 && daxie == 0 && xiaoxie > 0 && teshu == 0)) {
+                        $(".ruo").css({ "display": "block" });
+                        $(".zhong").css({ "display": "none" });
+                        $(".qiang").css({ "display": "none" });
+                        $("#qiang").css("display", "none");
+                        $("#ruo").css("display", "block");
+                        $("#zhong").css("display", "none");
+                    }
+                    else {
+                        $("#qiang").css("display", "none");
+                        $("#ruo").css("display", "block");
+                        $("#zhong").css("display", "none");
+                    }
+                }
+            });
+            //确认密码
+            $("#New_Password1").blur(function () {
+                $("#information").css("display", "none");
+                $("#information1").css("display", "none");
+                $("#information2").css("display", "none");
+                var str = $(this).val();
+                if (str.length == 0) {
+                    $("#information2").css("display", "block");
+                }
+                else {
+                    var str1 = $("#New_Password").val();
+                    if (str != str1) {
+                        $("#information").css("display", "block");
+                    }
+                    if (str == str1) {
+                        $("#information1").css("display", "block");
+                    }
+                }
+            })
+        });
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
