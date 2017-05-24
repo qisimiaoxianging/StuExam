@@ -102,8 +102,7 @@ namespace StuExam.DAL
         #endregion  ExtensionMethod
 
     }
-
-
+    
     /// <summary>
     /// 数据访问类:Choice
     /// </summary>

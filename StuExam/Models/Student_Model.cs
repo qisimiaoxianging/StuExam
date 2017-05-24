@@ -83,6 +83,7 @@ namespace StuExam.Model
 
     }
 
+    
     /// <summary>
     /// Choice:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>

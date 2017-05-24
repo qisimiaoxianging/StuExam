@@ -20,7 +20,7 @@ namespace StuExam.Teacher
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Man.Attributes["src"] = "ChoiceManagement .aspx";
+            Man.Attributes["src"] = "ChoiceManagement.aspx";
             li1.Style["background"] = "white";
             LinkButton1.Style["color"] = "rgb(144,175,199)";
             li2.Style["background"] = "rgb(144,175,199)";
