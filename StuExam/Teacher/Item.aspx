@@ -31,7 +31,7 @@
                 </ul>
             </div>
         </div>
-            <iframe id="Man" style="float:left" name="iframe1" runat="server" width="100%" height="820px" frameborder="0" src="" ></iframe>
+            <iframe id="Man" style="float:left" name="iframe1" runat="server" width="100%" height="820px" frameborder="0" src="ChoiceManagement.aspx" ></iframe>
         
     </div>
     </form>
