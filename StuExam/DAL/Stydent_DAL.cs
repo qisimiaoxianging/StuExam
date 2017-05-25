@@ -436,6 +436,14 @@ namespace StuExam.DAL
             StringBuilder strSql = new StringBuilder();
             strSql.Append("SELECT * FROM ( ");
             strSql.Append(" SELECT ROW_NUMBER() OVER (");
+            if (!string.IsNullOrEmpty(orderby.Trim()))
+            {
+                strSql.Append("order by T." + orderby);
+            }
+            else
+            {
+                strSql.Append("order by T.Number desc");
+            }
             strSql.Append(")AS Row, T.*  from Choice T ");
             if (!string.IsNullOrEmpty(strWhere.Trim()))
             {

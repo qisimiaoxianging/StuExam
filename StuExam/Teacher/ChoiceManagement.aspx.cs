@@ -50,7 +50,28 @@ namespace StuExam.Teacher
         //确认插入新的题目
         protected void Butt_Submit_Click(object sender, EventArgs e)
         {
+            StuExam.Model.Choice model = new StuExam.Model.Choice();
+            model.Subject = ((TextBox)GridView1.FooterRow.FindControl("Text_Subject")).Text.ToString().Replace("\r\n", "<br/>").Replace(" ", "&nbsp;");
+            model.Answer = ((TextBox)GridView1.FooterRow.FindControl("Text_Answer")).Text.ToString().Trim();
+            if (model.Answer.Length != 1 || (model.Answer[0] < 'A' || model.Answer[0] > 'D'))
+            {
+                this.Page.RegisterStartupScript("ss", "<script>alert('您输入的答案有误!')</script>");
+                return;
+            }
 
+            try
+            {
+                model.Chapter = int.Parse(((TextBox)GridView1.FooterRow.FindControl("Text_Chapter")).Text.ToString().Trim());
+            }
+            catch (Exception ex)
+            {
+                this.Page.RegisterStartupScript("ss", "<script>alert('您输入的章节有误!')</script>");
+                return;
+            }
+            if (StuExam.DAL.Choice.Add(model) != 0)
+                this.Page.RegisterStartupScript("ss", "<script>alert('插入成功!')</script>");
+            else
+                this.Page.RegisterStartupScript("ss", "<script>alert('插入失败!')</script>");
         }
     }
 }
