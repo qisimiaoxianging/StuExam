@@ -23,10 +23,11 @@ namespace StuExam.Teacher
                 //获取当前行
                 int rowIndex = Convert.ToInt32(e.CommandArgument); ;
                 //获取各参数
-                String Subject = ((TextBox)(GridView1.Rows[rowIndex].Cells[0].FindControl("TextBox1"))).Text.ToString();
-                Subject = Subject.Replace("\r\n", "<br/>").Replace(" ", "&nbsp;");
-                String Anewer = ((TextBox)(GridView1.Rows[rowIndex].Cells[1].FindControl("TextBox2"))).Text.ToString();
-                String Chapter = ((TextBox)(GridView1.Rows[rowIndex].Cells[2].FindControl("TextBox3"))).Text.ToString();
+                String Subject = ((TextBox)(GridView1.Rows[rowIndex].Cells[0].FindControl("TextBox1"))).Text.ToString().Trim();
+                //
+                String Anewer = ((TextBox)(GridView1.Rows[rowIndex].Cells[1].FindControl("TextBox2"))).Text.ToString().Trim();
+                String Chapter = ((TextBox)(GridView1.Rows[rowIndex].Cells[2].FindControl("TextBox3"))).Text.ToString().Trim();
+                
                 String Number = GridView1.DataKeys[rowIndex].Value.ToString();
                 if (StuExam.DAL.Choice.updateing(Number, Subject, Anewer, Chapter))
                 {
@@ -35,8 +36,7 @@ namespace StuExam.Teacher
                 else
                 {
                     this.Page.RegisterStartupScript("ss", "<script>alert('更新失败!')</script>");
-                }
-                GridView1.EditIndex = -1;
+                }       
             }
         }
         //取消修改
@@ -45,6 +45,7 @@ namespace StuExam.Teacher
             ((TextBox)GridView1.FooterRow.FindControl("Text_Subject")).Text = null;
             ((TextBox)GridView1.FooterRow.FindControl("Text_Answer")).Text = null;
             ((TextBox)GridView1.FooterRow.FindControl("Text_Chapter")).Text = null;
+            ((TextBox)GridView1.FooterRow.FindControl("Text_Number")).Text = null;
         }
 
         //确认插入新的题目
@@ -53,6 +54,8 @@ namespace StuExam.Teacher
             StuExam.Model.Choice model = new StuExam.Model.Choice();
             model.Subject = ((TextBox)GridView1.FooterRow.FindControl("Text_Subject")).Text.ToString().Replace("\r\n", "<br/>").Replace(" ", "&nbsp;");
             model.Answer = ((TextBox)GridView1.FooterRow.FindControl("Text_Answer")).Text.ToString().Trim();
+            Console.WriteLine(model.Answer);
+            Console.WriteLine(model.Subject);
             if (model.Answer.Length != 1 || (model.Answer[0] < 'A' || model.Answer[0] > 'D'))
             {
                 this.Page.RegisterStartupScript("ss", "<script>alert('您输入的答案有误!')</script>");
