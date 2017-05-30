@@ -147,6 +147,7 @@
     <Content Include="Styles\table.css" />
     <Content Include="Styles\TeacherHome.css" />
     <Content Include="Teacher\ChoiceManagement.aspx" />
+    <Content Include="Teacher\FillingManagement.aspx" />
     <Content Include="Teacher\Item.aspx" />
     <Content Include="Teacher\ModifyPassword.aspx" />
     <Content Include="Teacher\TeacherHome.aspx" />
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="Teacher\ChoiceManagement.aspx.designer.cs">
       <DependentUpon>ChoiceManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\FillingManagement.aspx.cs">
+      <DependentUpon>FillingManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\FillingManagement.aspx.designer.cs">
+      <DependentUpon>FillingManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\Item.aspx.cs">
       <DependentUpon>Item.aspx</DependentUpon>
@@ -233,7 +241,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2607</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

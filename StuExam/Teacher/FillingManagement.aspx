@@ -71,8 +71,60 @@
                         <asp:Label ID="Label5" runat="server" Text='<%# Bind("Answer3") %>' Width="200px"></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
+                <asp:TemplateField HeaderText="章节" SortExpression="Chapter">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("Chapter") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="TextBox11" runat="server" TextMode="MultiLine"></asp:TextBox>
+                    </FooterTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label6" runat="server" Text='<%# Bind("Chapter") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField ShowHeader="False" HeaderText="编辑">
+                    <EditItemTemplate>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Up" Text="更新" CommandArgument='<%# Container.DataItemIndex %>'></asp:LinkButton>
+                        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="取消"></asp:LinkButton>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="添加" />
+                    </FooterTemplate>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Edit" Text="编辑"></asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="删除" ShowHeader="False">
+                    <FooterTemplate>
+                        <asp:Button ID="Button2" runat="server" Text="取消" OnClick="Button2_Click" />
+                    </FooterTemplate>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="LinkButton4" runat="server" CausesValidation="False" CommandName="Delete" Text="删除"></asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
         </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:con %>" DeleteCommand="DELETE FROM [Filling] WHERE [Number] = @Number" InsertCommand="INSERT INTO [Filling] ([Subject], [Answer1], [Answer2], [Answer3], [Chapter]) VALUES (@Subject, @Answer1, @Answer2, @Answer3, @Chapter)" SelectCommand="SELECT [Number], [Subject], [Answer1], [Answer2], [Answer3], [Chapter] FROM [Filling]" UpdateCommand="UPDATE [Filling] SET [Subject] = @Subject, [Answer1] = @Answer1, [Answer2] = @Answer2, [Answer3] = @Answer3, [Chapter] = @Chapter WHERE [Number] = @Number">
+            <DeleteParameters>
+                <asp:Parameter Name="Number" Type="Int64" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="Subject" Type="String" />
+                <asp:Parameter Name="Answer1" Type="String" />
+                <asp:Parameter Name="Answer2" Type="String" />
+                <asp:Parameter Name="Answer3" Type="String" />
+                <asp:Parameter Name="Chapter" Type="Int32" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="Subject" Type="String" />
+                <asp:Parameter Name="Answer1" Type="String" />
+                <asp:Parameter Name="Answer2" Type="String" />
+                <asp:Parameter Name="Answer3" Type="String" />
+                <asp:Parameter Name="Chapter" Type="Int32" />
+                <asp:Parameter Name="Number" Type="Int64" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+    
     </div>
     </form>
 </body>
