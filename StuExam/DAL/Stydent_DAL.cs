@@ -460,6 +460,423 @@ namespace StuExam.DAL
         #endregion  ExtensionMethod
     }
 
+
+    /// <summary>
+    /// 数据访问类:Filling
+    /// </summary>
+    public partial class Filling
+    {
+        //数据库执行对象
+        private static SqlHelper m_sqlHelper = new SqlHelper();
+        public Filling()
+        { }
+        #region  BasicMethod
+        /// <summary>
+        /// 更新学生答题(填空题)
+        /// </summary>
+        public static bool UpdateList(object[,] Paper_Filling, string ExamId, string StudentId, int Num)
+        {
+            StringBuilder strSql1 = new StringBuilder();
+            StringBuilder strSql2 = new StringBuilder();
+            strSql1.Append("delete from Exam_Filling where ");
+            strSql1.Append("ExamId =" + ExamId);
+            strSql1.Append(" and StudentId =" + StudentId);
+
+            strSql2.Append("insert into Exam_Filling (ExamId,StudentId,Number,Subject,Answer1,Answer2,Answer3,StudentAnswer1,StudentAnswer2,StudentAnswer3,Score1,Score2,Score3,Value) values ");
+            for (int i = 0; i < Num; i++)
+            {
+                strSql2.Append("(");
+                strSql2.Append("'" + ExamId + "',");
+                strSql2.Append("'" + StudentId + "',");
+                strSql2.Append("'" + Paper_Filling[i, 0].ToString() + "',");
+                strSql2.Append("'" + Paper_Filling[i, 1].ToString().Replace("'", "''") + "',");
+                strSql2.Append("'" + Paper_Filling[i, 2].ToString().Replace("'", "''") + "',");
+                strSql2.Append("'" + Paper_Filling[i, 3].ToString().Replace("'", "''") + "',");
+                strSql2.Append("'" + Paper_Filling[i, 4].ToString().Replace("'", "''") + "',");
+                strSql2.Append("'" + Paper_Filling[i, 5].ToString().Replace("'", "''") + "',");
+                strSql2.Append("'" + Paper_Filling[i, 6].ToString().Replace("'", "''") + "',");
+                strSql2.Append("'" + Paper_Filling[i, 7].ToString().Replace("'", "''") + "',");
+                strSql2.Append("'" + Paper_Filling[i, 8].ToString() + "',");
+                strSql2.Append("'" + Paper_Filling[i, 9].ToString() + "',");
+                strSql2.Append("'" + Paper_Filling[i, 10].ToString() + "',");
+                strSql2.Append("'" + Paper_Filling[i, 11].ToString() + "'");
+                if (i < Num - 1)
+                    strSql2.Append("),");
+                else
+                    strSql2.Append(")");
+            }
+
+            //由于删除和插入必须同时完成所以使用事务
+            m_sqlHelper.BeginTrans();
+            try
+            {
+                int rows1 = m_sqlHelper.ExecuteNonQuery(strSql1.ToString());
+                int rows2 = m_sqlHelper.ExecuteNonQuery(strSql2.ToString());
+            }
+            catch (Exception ex)
+            {
+                m_sqlHelper.RollbackTrans();
+                return false;
+            }
+            finally
+            {
+                m_sqlHelper.CommitTrans();
+            }
+
+            return true;
+        }
+        /// <summary>
+        /// 增加考卷（填空题）
+        /// </summary>
+        public static bool AddList(DataTable dt)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into Filling_Paper (Id,Number,Subject,Answer1,Answer2,Answer3,Value) values ");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                strSql.Append("(");
+                strSql.Append("'" + dt.Rows[i][0] + "',");
+                strSql.Append("'" + dt.Rows[i][1] + "',");
+                strSql.Append("'" + dt.Rows[i][2].ToString().Replace("'", "''") + "',");
+                strSql.Append("'" + dt.Rows[i][3].ToString().Replace("'", "''") + "',");
+                strSql.Append("'" + dt.Rows[i][4].ToString().Replace("'", "''") + "',");
+                strSql.Append("'" + dt.Rows[i][5].ToString().Replace("'", "''") + "',");
+                strSql.Append("'" + dt.Rows[i][6] + "'");
+                if (i < dt.Rows.Count - 1)
+                    strSql.Append("),");
+                else
+                    strSql.Append(")");
+            }
+            int rows = m_sqlHelper.ExecuteNonQuery(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 是否存在该记录
+        /// </summary>
+        public static int Exists(int Number)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from Filling");
+            strSql.Append(" where Number=@Number");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Number", SqlDbType.Int,4)
+            };
+            parameters[0].Value = Number;
+
+            return (int)m_sqlHelper.ExecuteScalar(strSql.ToString(), parameters);
+        }
+
+
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public static int Add(StuExam.Model.Filling model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into Filling(");
+            strSql.Append("Subject,Answer1,Answer2,Answer3,Chapter)");
+            strSql.Append(" values (");
+            strSql.Append("@Subject,@Answer1,@Answer2,@Answer3,@Chapter)");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Subject", SqlDbType.NVarChar),
+                    new SqlParameter("@Answer1", SqlDbType.NVarChar,150),
+                    new SqlParameter("@Answer2", SqlDbType.NVarChar,150),
+                    new SqlParameter("@Answer3", SqlDbType.NVarChar,150),
+                    new SqlParameter("@Chapter", SqlDbType.Int,4)};
+            parameters[0].Value = model.Subject;
+            parameters[1].Value = model.Answer1;
+            parameters[2].Value = model.Answer2;
+            parameters[3].Value = model.Answer3;
+            parameters[4].Value = model.Chapter;
+
+            object obj = m_sqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public static bool Update(StuExam.Model.Filling model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update Filling set ");
+            strSql.Append("Subject='" + model.Subject + "',");
+            strSql.Append("Answer1='" + model.Answer1 + "',");
+            strSql.Append("Answer2='" + model.Answer2 + "',");
+            strSql.Append("Answer3='" + model.Answer3 + "',");
+            strSql.Append("Chapter='" + model.Chapter + "'");
+            strSql.Append(" where Number='" + model.Number + "'");
+
+            int rows = m_sqlHelper.ExecuteNonQuery(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        public static bool Delete(int Number)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from Filling ");
+            strSql.Append(" where Number=@Number");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Number", SqlDbType.Int,4)
+            };
+            parameters[0].Value = Number;
+
+            int rows = m_sqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 批量删除数据
+        /// </summary>
+        public static bool DeleteList(string Numberlist)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from Filling ");
+            strSql.Append(" where Number in (" + Numberlist + ")  ");
+            int rows = m_sqlHelper.ExecuteNonQuery(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public static StuExam.Model.Filling GetModel(int Number)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  top 1 Number,Subject,Answer1,Answer2,Answer3,Chapter,Section from Filling ");
+            strSql.Append(" where Number=@Number");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Number", SqlDbType.Int,4)
+            };
+            parameters[0].Value = Number;
+
+            StuExam.Model.Filling model = new StuExam.Model.Filling();
+            DataSet ds = m_sqlHelper.ExecuteDataSet(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public static StuExam.Model.Filling DataRowToModel(DataRow row)
+        {
+            StuExam.Model.Filling model = new StuExam.Model.Filling();
+            if (row != null)
+            {
+                if (row["Number"] != null && row["Number"].ToString() != "")
+                {
+                    model.Number = int.Parse(row["Number"].ToString());
+                }
+                if (row["Subject"] != null)
+                {
+                    model.Subject = (string)row["Subject"];
+                }
+                if (row["Answer1"] != null)
+                {
+                    model.Answer1 = row["Answer1"].ToString();
+                }
+                if (row["Answer2"] != null)
+                {
+                    model.Answer2 = row["Answer2"].ToString();
+                }
+                if (row["Answer3"] != null)
+                {
+                    model.Answer3 = row["Answer3"].ToString();
+                }
+                if (row["Chapter"] != null && row["Chapter"].ToString() != "")
+                {
+                    model.Chapter = int.Parse(row["Chapter"].ToString());
+                }
+                if (row["Section"] != null && row["Section"].ToString() != "")
+                {
+                    model.Section = int.Parse(row["Section"].ToString());
+                }
+            }
+            return model;
+        }
+
+        /// <summary>
+        ///  获得学生考试选择题答案存取信息
+        /// </summary>
+        public static DataTable ExamGetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select NewID() as rdId,Number,Subject,Answer1,Answer2,Answer3,StudentAnswer1,StudentAnswer2,StudentAnswer3,Value ");
+            strSql.Append(" FROM Exam_Filling ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            strSql.Append(" order by Value");
+            return m_sqlHelper.ExecuteDataTable(strSql.ToString());
+        }
+
+        /// <summary>
+        /// 获得试卷数据列表
+        /// </summary>
+        public static DataTable PaperGetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select NewID() as rdId,Number,Subject,Answer1,Answer2,Answer3,Value ");
+            strSql.Append(" FROM Filling_Paper ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            strSql.Append(" order by Value");
+            return m_sqlHelper.ExecuteDataTable(strSql.ToString());
+        }
+
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        public static DataTable GetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select Number,Subject,Answer1,Answer2,Answer3,Chapter,Section ");
+            strSql.Append(" FROM Filling ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return m_sqlHelper.ExecuteDataTable(strSql.ToString());
+        }
+
+        /// <summary>
+        /// 随机获得若干条数据
+        /// </summary>
+        public static DataTable GetList(int Top, string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select ");
+            if (Top > 0)
+            {
+                strSql.Append(" top " + Top.ToString());
+            }
+            strSql.Append(" NewID() as rdId,Subject,Answer1,Answer2,Answer3,Number");
+            strSql.Append(" FROM Filling ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            strSql.Append(" order by rdId");
+            return m_sqlHelper.ExecuteDataTable(strSql.ToString());
+        }
+        /// <summary>
+        /// 获得指定编号的题目信息
+        /// </summary>
+        public static DataTable GetListByNum(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select Subject,Answer1,Answer2,Answer3,Chapter,Section ");
+            strSql.Append(" FROM Filling ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return m_sqlHelper.ExecuteDataTable(strSql.ToString());
+        }
+
+        /// <summary>
+        /// 获取记录总数
+        /// </summary>
+        public static int GetRecordCount(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(Number) FROM Filling ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            object obj = m_sqlHelper.ExecuteNonQuery(strSql.ToString());
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+        /// <summary>
+        /// 分页获取数据列表
+        /// </summary>
+        public static DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("SELECT * FROM ( ");
+            strSql.Append(" SELECT ROW_NUMBER() OVER (");
+            if (!string.IsNullOrEmpty(orderby.Trim()))
+            {
+                strSql.Append("order by T." + orderby);
+            }
+            else
+            {
+                strSql.Append("order by T.Number desc");
+            }
+            strSql.Append(")AS Row, T.*  from Filling T ");
+            if (!string.IsNullOrEmpty(strWhere.Trim()))
+            {
+                strSql.Append(" WHERE " + strWhere);
+            }
+            strSql.Append(" ) TT");
+            strSql.AppendFormat(" WHERE TT.Row between {0} and {1}", startIndex, endIndex);
+            return m_sqlHelper.ExecuteDataSet(strSql.ToString());
+        }
+
+        #endregion  BasicMethod
+        #region  ExtensionMethod
+
+        #endregion  ExtensionMethod
+    }
+
     /// <summary>
     /// 数据访问类:Teacher
     /// </summary>
