@@ -112,6 +112,9 @@
   <ItemGroup>
     <Content Include="images\bg.jpg" />
     <Content Include="images\btn_bg.png" />
+    <Content Include="images\clock.png" />
+    <Content Include="images\item1.png" />
+    <Content Include="images\item2.png" />
     <Content Include="images\logo_school.png" />
     <Content Include="images\student_image.png" />
     <Content Include="login.aspx" />
@@ -142,9 +145,11 @@
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="Students\Management.aspx" />
     <Content Include="Students\ModifyPassword.aspx" />
+    <Content Include="Students\Practice.aspx" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\Management.css" />
     <Content Include="Styles\Modify.css" />
+    <Content Include="Styles\Proctice.css" />
     <Content Include="Styles\table.css" />
     <Content Include="Styles\TeacherHome.css" />
     <Content Include="Teacher\Assignment_work.aspx" />
@@ -159,6 +164,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="DAL\SqlHelper.cs" />
     <Compile Include="DAL\Stydent_DAL.cs" />
+    <Compile Include="Exam\Exam.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +191,13 @@
     </Compile>
     <Compile Include="Students\ModifyPassword.aspx.designer.cs">
       <DependentUpon>ModifyPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Practice.aspx.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students\Practice.aspx.designer.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\Assignment_work.aspx.cs">
       <DependentUpon>Assignment_work.aspx</DependentUpon>

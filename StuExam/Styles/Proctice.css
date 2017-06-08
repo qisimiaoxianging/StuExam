@@ -1,0 +1,416 @@
+﻿body 
+{
+    background-color:white;
+    margin:0;
+}
+*{
+    padding:0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+.top
+{
+    width: 1200px;
+    position: absolute;
+    top: 5px;
+    height: 60px;
+    background-color: rgb(240,240,240);
+    border-bottom: 5px solid #90afc7;
+    margin-left: 353px;
+    margin-right: 353px;
+    margin-top: 0px;
+}
+/*章节难度选择*/
+.xuanxiang
+{
+    width: 725px;
+    height: 60px;
+    float: left;
+    position: absolute;
+    left: 612px;
+}
+/*章节起*/
+.chapter 
+{
+    width: 90px;
+    height: 22px;
+    float: left;
+    position: relative;
+    padding:18px 1px;
+}
+.session
+{
+    width: 90px;
+    height: 22px;
+    float: left;
+    position: relative;
+    padding:18px 1px;
+}
+/*章节末*/
+.Chapter 
+{
+    width: 90px;
+    height: 22px;
+    float: left;
+    position: relative;
+    padding-top:18px;
+    padding-left:29px
+}
+.Session
+{
+    width: 90px;
+    height: 22px;
+    float: left;
+    position: relative;
+    padding:18px 1px;
+}
+.rank
+{
+    width: 123px;
+    height: 22px;
+    float: left;
+    position: relative;
+    padding:18px 1px;
+    right: 7px;
+}
+.assign
+{
+    width: 90px;
+    height: 22px;
+    float: left;
+    position: relative;
+    padding: 18px 0px;
+    padding-left: 10px;
+}
+.information
+{
+    width: 200px;
+    height: 46px;
+    float: right;
+    position: absolute;
+    right: 815px;
+    line-height: 10px;
+    padding-top: 14px;
+    color:#666;
+}
+.modify
+{
+    text-decoration:none;
+    color:blue;
+    position:relative;
+    left:27px;
+    font-size:15px;
+}
+.modify:hover
+{
+    color:Red;
+}
+.out
+{
+    text-decoration:none;   
+    position:relative;
+    left:1420px;
+    color:White;
+    font-size:15px;
+    height:10px;
+    padding-top:10px;
+}
+.out:hover
+{
+   background:rgb(63,105,135);
+}
+.font
+{
+    width: 170px;
+    height: 60px;
+    float: left;
+    text-align: center;    
+}
+.img
+{
+    width:85px;
+    height:120px;
+    float:left;
+}
+.posi_img
+{
+    position:absolute;
+    left:30px;
+    top:38px;
+}
+.posi_font
+{
+    font-weight: bold;
+    font-size: 31px;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    color:rgb(43,88,119);
+}
+/*左侧选题兰1*/
+.left
+{
+    width: 178px;
+    height: 781px;
+    background-color: #fcfcf5;
+    float: left;
+    position: relative;
+    left: 353px;
+    top: 83px;
+    display: inline;
+    margin: 0;
+    padding:0px 18px;
+}
+/*--选题栏2--*/
+.Select_Title
+{
+    width: 965px;
+    height: 85px;
+    float: left;
+    position: relative;
+    left: 375px;
+    top: 85px;
+    bottom: 0px;
+    background-color: #fbf0f0;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+/*小题选择*/
+.select_xiaoti
+{
+    width:960px;
+    height:40px;
+}
+/*小题选择里面具体的小的选择框*/
+.select_xiaoti div
+{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 9px 6px;
+    background-color: rgb(211,211,211);
+    text-align: center;
+    font-size: 15px;
+    display:none;
+}
+.select_xiaoti div:hover
+{
+    background-color:rgb(189,189,189);
+    cursor:pointer;
+}
+/*右侧的题目做的情况*/
+.logo
+{
+    height: 77px;
+    width: 201px;
+    position: absolute;
+    top: 5px;
+    right: 4px;
+}
+.zikuang
+{
+    float:right;
+    width:40px;
+    font-size:10px;
+    height:15px;
+}
+
+/*当前位于哪个大题中*/
+.Pot_dati
+{
+    width:965px;
+    height:40px;
+}
+.subjectType
+{
+    font-weight:bold;
+    position:relative;
+    top:10px;
+    left:10px; 
+}
+
+/*具体题目栏*/
+.Title  
+{
+    width: 955px;
+    height: 450px;
+    float: left;
+    position: relative;
+    left: 375px;
+    top: 100px;
+    background-color: #f5fcf5;
+    padding-left: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.subject
+{
+    width: 953px;
+    height: 435px;
+    position: relative;
+    top: 7px;
+    left: 10px;
+    border-radius: 10px;
+    line-height: 20px;
+    overflow:auto;
+    z-index: 0;
+}
+.a_image
+{
+    z-index:10;
+    display:none;
+    width:400px;
+    height:300px;
+    overflow:hidden;
+}
+/*答案栏*/
+.Answer
+{
+    width: 965px;
+    height: 95px;
+    border: 1px solid rgb(213,223,229);
+    float: left;
+    position: relative;
+    top: 110px;
+    left: 374px;
+    background-color: #fcfcfc;
+    margin-top: 8px;
+}
+.border_font
+{
+    position:relative;
+    font-family:@GungsuhChe;
+    font-weight:bold;
+    left:10px;
+    top:-8px;
+    font-size:15px;
+}
+.xuanze {
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom-color:black;
+    text-align:center;
+    margin:20px 10px;
+    background-color:#fcfcfc;
+}
+/*题型答题的形式*/
+.choice
+{
+    width:548px;
+    height:60px;
+    position:absolute;
+    top:35px;
+    left: 240px;  
+    display:none;  
+}
+.filling
+{
+    height: 62px;
+    width: 916px;
+    position: absolute;
+    top: 22px;
+    left: 46px;
+    font-size: 23px;
+    display:none;
+}
+.reading
+{
+    height: 84px;
+    position: relative;
+    top: -8px;
+    width: 953px;
+    display:none;
+}
+.design
+{
+    height: 84px;
+    position: relative;
+    top: -9px;
+    width: 953px;  
+    display:none;  
+} 
+/*底层栏*/
+.bottom
+{
+    width: 965px;
+    height: 87px;
+    float: left;
+    position: relative;
+    top: 115px;
+    left: 377px;
+    border-radius: 10px;
+}
+.Affirm
+{
+	color: white;
+	z-index:999;
+	font-weight:bold;
+	cursor:pointer;
+	background-color: rgb(144,175,199);    
+}
+.cancel
+{
+    float: right;		
+    color: white;
+    z-index:999;
+    font-weight:bold;
+    cursor:pointer; 
+    background-color: rgb(144,175,199);   
+}
+/*显示得分*/
+#countscore
+{
+    border-collapse:collapse;
+    border: 10px solid rgb(240,240,240);
+    position: relative ;
+    left: 616px;
+    top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: -3px 0px;
+    z-index:999;
+    opacity:1
+}
+#countscore tr td 
+{
+    width:220px;
+    height:19px;
+    text-align:center;
+    opacity:1
+}
+#countscore th
+{
+    background:#90afc7;
+    color:White;
+    height:40px;
+    opacity:1
+}
+.table_bottom {
+    border-top: dashed;
+    border-top-color: rgb(144,175,199);
+    width: 680px;
+    height: 41px;
+    position: relative;
+    top: 13px;
+    left: 616px;
+    background-color: rgb(240,240,240);
+    z-index: 999;
+    opacity: 1;
+}
+.button1
+{
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    height:30px;
+    margin: 6px 290px;
+	cursor:pointer;      
+    z-index:999;
+    opacity:1
+}
