@@ -141,6 +141,7 @@
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="Students\Management.aspx" />
+    <Content Include="Students\ModifyPassword.aspx" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\Management.css" />
     <Content Include="Styles\Modify.css" />
@@ -177,6 +178,13 @@
     </Compile>
     <Compile Include="Students\Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students\ModifyPassword.aspx.cs">
+      <DependentUpon>ModifyPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students\ModifyPassword.aspx.designer.cs">
+      <DependentUpon>ModifyPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\Assignment_work.aspx.cs">
       <DependentUpon>Assignment_work.aspx</DependentUpon>

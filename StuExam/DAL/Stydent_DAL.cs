@@ -63,6 +63,32 @@ namespace StuExam.DAL
             }
         }
 
+        /// <summary>
+        /// 更新密码
+        /// </summary>
+        public static bool Update(StuExam.Model.Student model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update Student set ");
+            strSql.Append("Password=@Password");
+            strSql.Append(" where StudentId=@StudentId and Name=@Name");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@Password", SqlDbType.NVarChar,20),
+                    new SqlParameter("@StudentId", SqlDbType.NVarChar,20),
+                    new SqlParameter("@Name", SqlDbType.NVarChar,15),};
+            parameters[0].Value = model.Password;
+            parameters[1].Value = model.StudentId;
+            parameters[2].Value = model.Name;
+            int rows = m_sqlHelper.ExecuteNonQuery(strSql.ToString(), parameters); ;
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// 获得数据列表
