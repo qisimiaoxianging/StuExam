@@ -146,6 +146,7 @@
     <Content Include="Styles\Modify.css" />
     <Content Include="Styles\table.css" />
     <Content Include="Styles\TeacherHome.css" />
+    <Content Include="Teacher\Assignment_work.aspx" />
     <Content Include="Teacher\ChoiceManagement.aspx" />
     <Content Include="Teacher\FillingManagement.aspx" />
     <Content Include="Teacher\Item.aspx" />
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="Students\Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Assignment_work.aspx.cs">
+      <DependentUpon>Assignment_work.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Assignment_work.aspx.designer.cs">
+      <DependentUpon>Assignment_work.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\ChoiceManagement.aspx.cs">
       <DependentUpon>ChoiceManagement.aspx</DependentUpon>

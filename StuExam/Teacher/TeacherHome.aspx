@@ -24,12 +24,13 @@
         </div>
         <div class="option">
             <ul id="nav">
+                <li id="li1" runat="server"><asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">密码修改</asp:LinkButton></li> 
                 <li id="li2" runat="server"><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">题库修改</asp:LinkButton></li> 
-                <li id="li1" runat="server"><asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">密码修改</asp:LinkButton></li>           
+                <li id="li3" runat="server"><asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">发布考试</asp:LinkButton></li>           
             </ul>
         </div>
         <%--中间层--%>
-        <iframe id="iframe1" name="iframe1" runat="server" width="100%" height="820px" frameborder="0" ></iframe>
+        <iframe id="iframe1" name="iframe1" runat="server" width="100%" height="820px" frameborder="0" src="Assignment_work.aspx"  ></iframe>
     </div>
     </form>
 </body>
